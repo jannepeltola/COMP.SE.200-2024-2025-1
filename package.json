@@ -5,13 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --reporter mochawesome"
+    "test": "mocha",
+    "test-ctrf": "mocha --reporter mocha-ctrf-json-reporter"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^10.7.3",
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "mocha-ctrf-json-reporter": "^0.0.6"
   }
 }
