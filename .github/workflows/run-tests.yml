@@ -17,7 +17,7 @@ jobs:
     - name: Run tests with CLI output
       run: npm test
     - name: Run tests with CTRF annotations
-      run: npm test-ctrf
+      run: npm run test-ctrf
     - name: Publish CTRF annotations
       run: npx github-actions-ctrf ctrf/ctrf.json
       if: always()
