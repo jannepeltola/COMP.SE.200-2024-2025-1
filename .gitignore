@@ -2,3 +2,4 @@ node_modules
 ctrf/*
 .nyc_output
 coverage
+.DS_Store
