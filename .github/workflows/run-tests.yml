@@ -19,3 +19,5 @@ jobs:
     - name: Publish CTRF annotations
       run: npx github-actions-ctrf ctrf/ctrf-report.json
       if: always()
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2
