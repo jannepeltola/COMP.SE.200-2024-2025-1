@@ -14,11 +14,12 @@ jobs:
         cache: 'npm'
     - name: Install npm packages
       run: npm install
-    - name: Run Coveralls
-      uses: coverallsapp/github-action@v2
     - name: Run tests with CTRF annotations
-      run: npm run test-ctrf
+      run: npm test
     - name: Publish CTRF annotations
       run: npx github-actions-ctrf ctrf/ctrf-report.json
+      if: always()
+    - name: Run Coveralls
+      uses: coverallsapp/github-action@v2
       if: always()
     
