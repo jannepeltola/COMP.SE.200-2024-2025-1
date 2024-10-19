@@ -1,0 +1,3 @@
+{
+    "reporterEnabled": "mocha-ctrf-json-reporter,mocha-lcov-reporter"
+}
