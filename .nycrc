@@ -3,5 +3,7 @@
   "include": [
     "src/**.js"
   ],
-  "exclude": []
+  "exclude": [
+    "test"
+  ]
 }
