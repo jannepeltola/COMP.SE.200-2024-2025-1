@@ -1,6 +1,10 @@
 import { expect } from 'chai';
 import camelCase from '../src/camelCase.js';
 
+// NOTE: Broken
+// Remove the space from the end of the function return statement after comma
+
+
 describe('camelCase', () => {
   it('should convert regular strings to camelCase', () => {
     expect(camelCase('Foo Bar')).to.equal('fooBar');
