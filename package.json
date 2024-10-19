@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-     "test": "nyc --reporter=html --reporter=text mocha test --reporter=mocha-ctrf-json-reporter",
-     "coverage": "nyc report --reporter=text-lcov" 
+     "test": "nyc --reporter=html --reporter=text --reporter=text-lcov mocha test --reporter=mocha-ctrf-json-reporter"
     },
   "author": "",
   "license": "MIT",

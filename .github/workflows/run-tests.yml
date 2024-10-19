@@ -14,11 +14,8 @@ jobs:
         cache: 'npm'
     - name: Install npm packages
       run: npm install
-    - name: Run tests with CTRF annotations
+    - name: Run tests with CTRF annotations and code coverage
       run: npm test
-    - name: Produce coverage report
-      run: npm run coverage
-      if: always()
     - name: Publish CTRF annotations
       run: npx github-actions-ctrf ctrf/ctrf-report.json
       if: always()
