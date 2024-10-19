@@ -12,4 +12,5 @@ jobs:
       uses: actions/setup-node@v4
       with:
         cache: 'npm'
+    - run: npm install
     - run: npm test
