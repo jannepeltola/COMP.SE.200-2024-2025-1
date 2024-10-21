@@ -1,6 +1,11 @@
 import { expect } from 'chai';
 import filter from '../src/filter.js';
 
+// NOTE: Broken
+// Remove one nested array from result constant, line 28
+
+
+
 describe('filter', () => {
   it('should return an array of elements that match the predicate', () => {
     const users = [

@@ -1,6 +1,11 @@
 import { expect } from 'chai';
 import eq from '../src/eq.js';
 
+
+// NOTE: Broken
+// Add one more = sign to comparison to make it a strict equal
+
+
 describe('eq', () => {
   it('should return true for strictly equal primitive values', () => {
     expect(eq('a', 'a')).to.equal(true);
@@ -44,9 +49,9 @@ describe('eq', () => {
   });
 
   it('should handle edge cases with different types', () => {
-    expect(eq(0, false)).to.equal(true);  // because of `==` comparison
-    expect(eq('', false)).to.equal(true);  // due to type coercion
-    expect(eq([], '')).to.equal(true);     // empty array is loosely equal to an empty string
+    expect(eq(0, false)).to.equal(false);  // because of `==` comparison
+    expect(eq('', false)).to.equal(false);  // due to type coercion
+    expect(eq([], '')).to.equal(false);     // empty array is loosely equal to an empty string
     expect(eq({}, '[object Object]')).to.equal(false);  // object not loosely equal to string
   });
 });

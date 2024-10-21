@@ -45,7 +45,14 @@ describe('slice', () => {
 
   it('should handle mixed positive and negative indices', () => {
     expect(slice(array, -3, 3)).to.deep.equal([2, 3]);
-    expect(slice(array, 1, -1)).to.deep.equal([2, 3, 4]);
+    expect(slice(array, 1, -1)).to.deep.equal([2, 3]);
+  });
+
+  it('should handle limit values', () => {
+    expect(slice(array, 0, 4)).to.deep.equal([1, 2, 3, 4]);
+    expect(slice(array, 1, 3)).to.deep.equal([2, 3]);
+    expect(slice(array, 0, 4)).to.deep.equal([1, 2, 3, 4]);
+    expect(slice(array, -5, 4)).to.deep.equal([1, 2, 3, 4]);
   });
 
   it('should handle slice beyond array bounds gracefully', () => {

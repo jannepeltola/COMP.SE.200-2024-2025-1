@@ -11,8 +11,8 @@ describe('divide', () => {
   });
 
   it('should handle division by zero', () => {
-    expect(divide(6, 0)).to.be.Infinity;
-    expect(divide(-6, 0)).to.be.NegativeInfinity;
+    expect(divide(6, 0)).to.equal(Infinity);
+    expect(divide(-6, 0)).to.equal(-Infinity);
     expect(divide(0, 0)).to.be.NaN;
   });
 

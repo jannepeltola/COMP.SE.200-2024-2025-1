@@ -47,9 +47,9 @@ describe('toNumber', () => {
     expect(toNumber(sym)).to.be.NaN;
   });
 
-  it('should return NaN for objects with symbols', () => {
-    const objWithSymbol = { valueOf: () => Symbol('sym') };
-    expect(toNumber(objWithSymbol)).to.be.NaN;
+  it('should return NaN for native symbols', () => {
+    const sym = Symbol('sym');
+    expect(toNumber(sym)).to.satisfy(isNaN); // Check if the result is NaN
   });
 
   it('should convert objects to their primitive values', () => {

@@ -17,7 +17,7 @@ describe('ceil', () => {
 
   it('should handle negative precision', () => {
     expect(ceil(6040, -2)).to.equal(6100); // round up to the nearest hundred
-    expect(ceil(990, -1)).to.equal(1000); // round up to the nearest ten
+    expect(ceil(990, -2)).to.equal(1000); // round up to the nearest ten
   });
 
   it('should handle edge cases with zero precision', () => {
@@ -27,7 +27,7 @@ describe('ceil', () => {
 
   it('should handle large numbers', () => {
     expect(ceil(123456.789, 2)).to.equal(123456.79);
-    expect(ceil(123456789.123456, -5)).to.equal(123460000);
+    expect(ceil(123456789.123456, -4)).to.equal(123460000);
   });
 
   it('should handle negative numbers', () => {
@@ -40,6 +40,6 @@ describe('ceil', () => {
     expect(ceil(NaN)).to.be.NaN;
     expect(ceil('abc')).to.be.NaN;
     expect(ceil(null)).to.equal(0);
-    expect(ceil(undefined)).to.equal(0);
+    expect(ceil(undefined)).to.be.NaN;
   });
 });
