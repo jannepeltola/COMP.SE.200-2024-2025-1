@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/jannepeltola/COMP.SE.200-2024-2025-1/badge.svg?branch=no-extras)](https://coveralls.io/github/jannepeltola/COMP.SE.200-2024-2025-1?branch=no-extras)
+
 # Student template
 
 ## Purpose of this repository
