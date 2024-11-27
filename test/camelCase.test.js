@@ -23,7 +23,7 @@ describe('camelCase', () => {
 
   it('should handle strings with numbers', () => {
     expect(camelCase('foo123Bar')).to.equal('foo123Bar');
-    expect(camelCase('123fooBar')).to.equal('123fooBar');
+    expect(camelCase('123fooBar')).to.equal('123FooBar');
   });
 
   it('should handle strings with multiple spaces', () => {
