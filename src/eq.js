@@ -28,6 +28,9 @@
  * eq(NaN, NaN)
  * // => true
  */
+
+// NOTE: Broken
+// add one more equals sign to value === other
 function eq(value, other) {
   return value === other || (value !== value && other !== other)
 }

@@ -21,6 +21,10 @@
  * filter(users, ({ active }) => active)
  * // => objects for ['barney']
  */
+
+// NOTE: Broken
+// remove one nested array from const result = [[]]
+
 function filter(array, predicate) {
   let index = -1
   let resIndex = 0
